@@ -1,21 +1,50 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
-import About from './pages/about'
 import Home from './pages/home'
-import Cats from './pages/cats'
-import Dogs from './pages/dogs'
-import Contact from './pages/contact'
+
+const About = React.lazy(() => import('./pages/about'))
+const Cats = React.lazy(() => import('./pages/cats'))
+const Dogs = React.lazy(() => import('./pages/dogs'))
+const Contact = React.lazy(() => import('./pages/contact'))
 
 const App = () => {
   return (
     <div className="App">
      <Routes>
        <Route path="/" element={<Home />} />
-       <Route path="/about" element={<About />} />
-       <Route path="/cats" element={<Cats />} />
-       <Route path="/dogs" element={<Dogs />} />
-       <Route path="/contact" element={<Contact />} />
+       <Route
+            path="about"
+            element={
+              <React.Suspense fallback={<>Loading...</>}>
+                <About />
+              </React.Suspense>
+            }
+          />
+        <Route
+            path="cats"
+            element={
+              <React.Suspense fallback={<>Loading...</>}>
+                <Cats />
+              </React.Suspense>
+            }
+          />
+        <Route
+            path="dogs"
+            element={
+              <React.Suspense fallback={<>Loading...</>}>
+                <Dogs />
+              </React.Suspense>
+            }
+          />
+        <Route
+            path="contact"
+            element={
+              <React.Suspense fallback={<>Loading...</>}>
+                <Contact />
+              </React.Suspense>
+            }
+          />
      </Routes>
     </div>
   )
