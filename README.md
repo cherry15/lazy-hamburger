@@ -28,7 +28,7 @@ Thanks to [Stackoverflow](https://stackoverflow.com/questions/71685441/react-tes
 
 If you get errors running the app you will need to update the versions of react types.
 
-Have a look in package.json and if you see types lower than version 18 delete them, eg delete the following
+Have a look in package.json and if you see types for react or react-dom lower than version 18 delete them, eg delete the following
 
 "@types/react": "^17.0.1",
 
@@ -57,6 +57,3 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-#� �l�a�z�y�-�h�a�m�b�u�r�g�e�r�
-�
-�
