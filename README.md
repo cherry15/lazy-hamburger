@@ -28,17 +28,16 @@ Thanks to [Stackoverflow](https://stackoverflow.com/questions/71685441/react-tes
 
 If you get errors running the app you will need to update the versions of react types.
 
-Have a look in package.json and if you see types for react or react-dom lower than version 18 delete them, eg delete the following
+Have a look in package.json and if you see types for react or react-dom lower than version 18 then you'll need to update them
 
 "@types/react": "^17.0.1",
 
 "@types/react-dom": "^17.0.0",
-		...
+...
 
-Then install the latest versions
-#### `npm install --save @types/react`
+#### `npm install --save @types/react@latest`
 
-#### `npm install --save @types/react-dom`
+#### `npm install --save @types/react-dom@latest`
 
 ## Available Scripts
 
